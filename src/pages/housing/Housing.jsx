@@ -1,4 +1,4 @@
-import './Housing.css';
+import './Housing.scss';
 
 function Housing() {
     return (
