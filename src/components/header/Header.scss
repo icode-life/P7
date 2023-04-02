@@ -1,3 +1,23 @@
+@import '../../style/var-g.scss';
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.logo-title{
+    padding: 26px 60px;
+    margin-top: 0px;
+    font-size: 73px;
+    color: $primary;
+    height: 10px;
+    letter-spacing: 1px;
+}
+
+img{
+    padding-left: 2px;
+    padding-right: 3px;
+}
 .menu{
     display: flex;
     justify-content: flex-end;
@@ -8,11 +28,10 @@
 
 .menu-item{
     text-decoration: none;
-    color: black;
     list-style-type: none;
 }
 
 a, a:visited{
     text-decoration: none;
-    color: black;
+    color: $primary;
 }
