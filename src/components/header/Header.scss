@@ -1,0 +1,18 @@
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.menu-item{
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+}
+
+a, a:visited{
+    text-decoration: none;
+    color: black;
+}
