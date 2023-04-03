@@ -3,21 +3,16 @@
 .header{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.logo-title{
-    padding: 26px 60px;
+.style-logo{
+    display: flex;
+    padding: 26px 50px;
     margin-top: 0px;
-    font-size: 73px;
-    color: $primary;
-    height: 10px;
-    letter-spacing: 1px;
+    height: 50px;
 }
 
-img{
-    padding-left: 2px;
-    padding-right: 3px;
-}
 .menu{
     display: flex;
     justify-content: flex-end;
