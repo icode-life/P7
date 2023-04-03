@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Home.scss';
+import Card from '../../components/card/Card';
 
 function Home() {
   //Pour utiliser les states, il faut toujours définir un 'getter' et un 'setter'
@@ -8,7 +9,7 @@ function Home() {
 
   useEffect(() => {
     fetch('./data.json')
-    .then((response) => response.json)
+    .then((response) => response.json())
     .then((data) => {
       setLogements(data);
       setIsLoading(false);
@@ -16,7 +17,16 @@ function Home() {
   }, []); //les crochets vides sont en fait le tableau de dépendance pour le refresh de la section concernée
 
   return (
-    <div className='main'>Main Page</div>
+    <div className='main'>
+      <p>Main Page</p>
+      {!isLoading && (logements.map((logement) => {
+        return (
+          <div>
+            <Card key={logement.id} title={logement.title} cover={logement.cover}/>
+          </div>
+        )
+      }))}      
+    </div>
   );
 }
 
