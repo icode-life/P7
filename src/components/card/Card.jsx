@@ -3,10 +3,11 @@ import './Card.scss'
 
 const Card = ({title, cover}) => {
     return(
-        <div style={{backgroundImage: `url(${cover})`}} className='card'>
-            <p>{title}</p>
-{/*             <img src={cover} alt='cover logement'/>
- */}    </div>
+        <Link>
+            <div style={{background: `linear-gradient(to bottom, transparent 0%, transparent 80%, #555555 100%), url(${cover})`}} className='card'>
+                <p className='card-title'>{title}</p>
+            </div>
+        </Link>
       );
 };
 

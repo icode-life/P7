@@ -1,5 +1,8 @@
 .card{
     height: 300px;
     width: 300px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    &-title{
+        color: white;
+        position: relative;
+    }
 }
