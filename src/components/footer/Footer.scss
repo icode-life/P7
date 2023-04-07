@@ -3,4 +3,7 @@
 footer{
     background-color: $footer-color;
     color: $footer-font-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
