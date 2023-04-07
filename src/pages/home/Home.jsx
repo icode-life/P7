@@ -19,8 +19,7 @@ function Home() {
 
   return (
     <div className='main'>
-      <div style={{ backgroundImage :  `url(${Banner})`,
-    backgroundSize: 'cover', backgroundPosition: "center"}} className='banner'>
+      <div style={{ backgroundImage :  `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: "center"}} className='banner'>
         <p className='catchPhrase'>Chez vous, partout et ailleurs</p>
       </div>
       <div className='container-cards'>
