@@ -2,6 +2,20 @@
   margin: 35px;
 }
 
+.banner{
+  height: 150px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.catchPhrase{
+  color: white;
+}
+
 .container-cards{
   height: fit-content;
   background-color: #f6f6f6;
