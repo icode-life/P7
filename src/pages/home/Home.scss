@@ -1,4 +1,7 @@
-.main{
-  height: 800px;
-  background-color: grey;
+.container-cards{
+  height: fit-content;
+  background-color: lightgrey;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }

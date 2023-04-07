@@ -18,14 +18,15 @@ function Home() {
 
   return (
     <div className='main'>
-      <p>Main Page</p>
-      {!isLoading && (logements.map((logement) => {
-        return (
-          <div>
-            <Card key={logement.id} title={logement.title} cover={logement.cover}/>
-          </div>
-        )
-      }))}      
+      <div className='container-cards'>
+        {!isLoading && (logements.map((logement) => {
+          return (
+            <div>
+                <Card key={logement.id} title={logement.title} cover={logement.cover}/>
+            </div>
+          )
+        }))}  
+      </div>    
     </div>
   );
 }

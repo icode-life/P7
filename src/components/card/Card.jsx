@@ -3,10 +3,10 @@ import './Card.scss'
 
 const Card = ({title, cover}) => {
     return(
-        <div>
+        <div style={{backgroundImage: `url(${cover})`}} className='card'>
             <p>{title}</p>
-            <img src={cover} alt='cover logement'/>
-        </div>
+{/*             <img src={cover} alt='cover logement'/>
+ */}    </div>
       );
 };
 
