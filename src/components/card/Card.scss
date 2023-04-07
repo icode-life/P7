@@ -1,8 +1,13 @@
 .card{
     height: 300px;
     width: 300px;
+    position: relative;
+    border-radius: 10px;
     &-title{
         color: white;
-        position: relative;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+
     }
 }
