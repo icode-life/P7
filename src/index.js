@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './pages/layout/Layout'
 import Home from './pages/home/Home'
-import Housing from './pages/housing/Housing'
+import Listing from './pages/listing/Listing'
 import About from './pages/about/About'
 import Error404 from './pages/error404/Error404'
 import './index.scss'
@@ -14,7 +14,7 @@ export default function App(){
             <Routes>
                 <Route exact path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="housing" element={<Housing />} />
+                    <Route path="listings/:listing" element={<Listing />} />
                     <Route path="about" element={<About />} />
                     <Route path="*" element={<Error404 />} />
                 </Route>

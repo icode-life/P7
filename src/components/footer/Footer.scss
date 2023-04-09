@@ -6,4 +6,15 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.style-logo{
+    color: white;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
