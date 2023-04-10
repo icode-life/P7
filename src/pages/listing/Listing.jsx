@@ -16,7 +16,9 @@ function Listing() {
 
     return (
         <div>
-            <div className='carouselContainer'>carousel</div>
+            <div className='carouselContainer'>
+                <img src={listingDetails.pictures[0]} alt="photos carousel" className='carousel'/>
+            </div>
             <div className='listingTitleNProp'>
                 <div className='titleNSub'>
                     <div className='titleMain'>{listingDetails.title}</div>
