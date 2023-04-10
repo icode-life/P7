@@ -2,6 +2,9 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './Listing.scss';
 import ListingsData from '../../assets/listings.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons'
 
 
 function Listing() {
@@ -34,7 +37,7 @@ function Listing() {
                     return(
                         <p className='tag'>{tag}</p>
                 )})}</div>
-                <div className='stars'>stars</div>
+                <div className='stars'><FontAwesomeIcon icon={faStarEmpty} /></div>
             </div>
             <div className='collapses'>
                 <div className='collapse'>collapse 1</div>
