@@ -1,16 +1,52 @@
 import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import './Listing.scss';
+import ListingsData from '../../assets/listings.json';
 
 
 function Listing() {
+
+    let {listing} = useParams();
+    let splitListing = listing.split("");
+    splitListing.splice(0,1);
+    const listingId = splitListing.join('');
     
-    const {listing} = useParams();
-    console.log(listing);
+    const listingDetails = ListingsData.find( (lst) => lst.id === listingId);
+    console.log(listingDetails);
 
     return (
         <div>
-            <h1 className="housing">housing</h1>
+            <div className='carouselContainer'>carousel</div>
+            <div className='listingTitleNProp'>
+                <div className='titleNSub'>
+                    <div className='titleMain'>{listingDetails.title}</div>
+                </div>
+                <div className='proprio'>
+
+                </div>
+            </div>
+            <div className='tagsNStars'>
+                <div className='tags'>tags</div>
+                <div className='stars'>stars</div>
+            </div>
+            <div className='collapses'></div>
         </div>
     )
 }
 export default Listing;
+
+
+/*     const [lst, setLst] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        fetch('./data.json')
+        .then((response) => console.log(response))
+        .then((data) => {
+                        console.log(data);
+
+        setLst(data);
+        setIsLoading(false);
+        console.log(lst);
+        });
+    }, []); */
