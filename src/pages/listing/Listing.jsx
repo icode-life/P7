@@ -30,7 +30,10 @@ function Listing() {
                 </div>
             </div>
             <div className='tagsNStars'>
-                <div className='tags'>tags</div>
+                <div className='tags'>{listingDetails.tags.map((tag) => { 
+                    return(
+                        <p className='tag'>{tag}</p>
+                )})}</div>
                 <div className='stars'>stars</div>
             </div>
             <div className='collapses'>

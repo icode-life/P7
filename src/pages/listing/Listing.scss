@@ -19,6 +19,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 0;
+    margin-bottom: 0px;
     .titleNSub{
         display: flex;
         flex-direction: column;
@@ -51,7 +52,19 @@
 .tagsNStars{
     display: flex;
     margin: 5%;
+    margin-top: 0px;
     justify-content: space-between;
+    .tags{
+        display: flex;
+        gap: 10px;
+       .tag{
+            background-color: $primary;
+            padding: 0 30px;
+            color: white;
+            border-radius: 35px;
+            font-size: small;
+        }
+    }
 }
 
 .collapses{
