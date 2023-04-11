@@ -63,10 +63,17 @@
             color: white;
             border-radius: 35px;
             font-size: small;
+            display: flex;
+            align-items: center;
         }
     }
     .stars{
-        color: red;
+        width: 200px;
+        height: 50px;
+        background-color: blueviolet;
+        .star{
+            color: blueviolet;
+        }
     }
 }
 

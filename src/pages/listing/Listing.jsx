@@ -16,6 +16,7 @@ function Listing() {
     
     const listingDetails = ListingsData.find( (lst) => lst.id === listingId);
     console.log(listingDetails);
+    const rating = [1, 2, 3, 4, 5];
 
     return (
         <div>
@@ -37,7 +38,16 @@ function Listing() {
                     return(
                         <p className='tag'>{tag}</p>
                 )})}</div>
-                <div className='stars'><FontAwesomeIcon icon={faStarEmpty} /></div>
+                <div className='stars'>{
+                    rating.map((i) => {
+                        i <= Number(listingDetails.rating) ? (
+                        <FontAwesomeIcon key={i} icon={faStar} /> 
+                        ) : ( 
+                        <FontAwesomeIcon key={i} icon={faStarEmpty} />
+                        )
+                    })
+                }
+                </div>
             </div>
             <div className='collapses'>
                 <div className='collapse'>collapse 1</div>
