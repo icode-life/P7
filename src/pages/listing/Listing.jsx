@@ -39,13 +39,13 @@ function Listing() {
                         <p className='tag'>{tag}</p>
                 )})}</div>
                 <div className='stars'>{
-                    rating.map((i) => {
+                    rating.map((i) => (
                         i <= Number(listingDetails.rating) ? (
-                        <FontAwesomeIcon key={i} icon={faStar} /> 
+                        <FontAwesomeIcon key={i} icon={faStar} className='star' /> 
                         ) : ( 
-                        <FontAwesomeIcon key={i} icon={faStarEmpty} />
+                        <FontAwesomeIcon key={i} icon={faStar} className='starEmpty' />
                         )
-                    })
+                    ))
                 }
                 </div>
             </div>
