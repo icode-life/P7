@@ -1,12 +1,32 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-const Collapse = () => {
-    const [isOpen, setIsOpen] = useState(false);
+const Collapsible = () => {
+    const [isCollapsed, setIsCollapsed] = useState(false);
+
+    function toggleCollapse() {
+        setIsCollapsed(isCollapsed);
+    }
 
     return (
+        <div>
+        <button onClick={toggleCollapse}>
+            {isCollapsed ? "Expand" : "Collapse"}
+        </button>
 
+        {isCollapsed ? null : (
+            <div>
+            <p>This is the collapsible content!</p>
+            </div>
+        )}
+        </div>
     );
-
 }
 
-export default Collapse;
+export default Collapsible;
+
+
+  
+
+  
+
+
