@@ -14,7 +14,7 @@ export default function App(){
             <Routes>
                 <Route exact path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="listings/:listing" element={<Listing />} />
+                    <Route path="listings/:listingId" element={<Listing />} />
                     <Route path="about" element={<About />} />
                     <Route path="*" element={<Error404 />} />
                 </Route>
