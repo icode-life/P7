@@ -11,6 +11,8 @@
         border-radius: 20px;
         object-fit: cover;
         overflow: hidden;
+        background-position: center;
+        background-size: cover;
     }
 }
 
@@ -83,16 +85,9 @@
     }
 }
 
-                
-
 .collapses{
     display: flex;
     margin: 5%;
-    background-color: lightgrey;
     justify-content: space-between;
-    .collapse{
-        background-color: gray;
-        height: 200px;
-    }
 }
 

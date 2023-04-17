@@ -1,21 +1,22 @@
 import { useState } from 'react';
 
-const Collapsible = () => {
+const Collapsible = ([title, content]) => {
     const [isCollapsed, setIsCollapsed] = useState(false);
 
     function toggleCollapse() {
-        setIsCollapsed(isCollapsed);
+        setIsCollapsed(!isCollapsed);
     }
 
     return (
-        <div>
-        <button onClick={toggleCollapse}>
-            {isCollapsed ? "Expand" : "Collapse"}
-        </button>
-
-        {isCollapsed ? null : (
+        <div onClick={toggleCollapse}>           
+        {isCollapsed ? (
             <div>
-            <p>This is the collapsible content!</p>
+                <div className='collapsibleTitle'>{title}</div>
+                <div className='collapsibleContent'>{content}</div>
+            </div>
+        ) : (
+            <div>
+                <div className='collapsibleTitle'>{title}</div>
             </div>
         )}
         </div>

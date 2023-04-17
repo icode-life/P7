@@ -5,6 +5,7 @@ import ListingsData from '../../assets/listings.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 /* import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons' */
+import Collapsible from '../../components/collapse/Collapse';
 
 
 function Listing() {
@@ -59,6 +60,8 @@ function Listing() {
                     </div>
                 </div>
                 <div className='collapses'>
+                    {/* <Collapsible title={listing.description} content={listing.equipements} />
+                    <Collapsible title={listing.description} content={listing.equipements} /> */}
                     <div className='collapse'>collapse 1</div>
                     <div className='collapse'>collapse 2</div>
                 </div>
