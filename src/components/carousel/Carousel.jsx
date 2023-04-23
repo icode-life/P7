@@ -11,7 +11,7 @@ const Carousel = ({pictures}) => {
   const [position, setPosition] = useState(0);
   const arrayLength = pictures.length;
 
-  // Set next index according to the direction
+  // slider mgmt
   const scroll = (direction) => (
     direction === 'next'
       ? (setPosition(position === arrayLength - 1 ? 0 : position + 1))
