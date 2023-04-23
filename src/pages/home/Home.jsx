@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import './Home.scss';
 import Card from '../../components/card/Card';
-import Banner from '../../assets/banner-img.png';
+import Banner from '../../components/banner/Banner';
+
 
 function Home() {
   //Pour utiliser les states, il faut toujours définir un 'getter' et un 'setter'
@@ -19,9 +20,9 @@ function Home() {
 
   return (
     <div className='main'>
-      <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${Banner})`, backgroundSize: 'cover', backgroundPosition: "center"}} className='banner'>
+      <Banner> 
         <p className='catchPhrase'>Chez vous, partout et ailleurs</p>
-      </div>
+      </Banner>
       <div className='container-cards'>
         {!isLoading && (logements.map((logement) => {
           return (
