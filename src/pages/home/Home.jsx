@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './Home.scss';
 import Card from '../../components/card/Card';
 import Banner from '../../components/banner/Banner';
-
+import backgroundImage from '../../assets/banner-img.png';
 
 function Home() {
   //Pour utiliser les states, il faut toujours définir un 'getter' et un 'setter'
@@ -20,7 +20,7 @@ function Home() {
 
   return (
     <div className='main'>
-      <Banner> 
+      <Banner backgroundImage={backgroundImage}> 
         <p className='catchPhrase'>Chez vous, partout et ailleurs</p>
       </Banner>
       <div className='container-cards'>
