@@ -3,10 +3,9 @@ import { useEffect, useState } from 'react';
 import './Listing.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import Collapsible from '../../components/collapse/Collapse';
 import Error404 from '../error404/Error404';
+import Carousel from '../../components/carousel/Carousel';
 
 
 function Listing() {
@@ -30,28 +29,12 @@ function Listing() {
         return <Error404 />
      } //gestion de traficotage de l'url au niveau des ids en paramètres
 
+    
     return (
         <div>
             {!isLoading ? (
             <div>
-                <div className='carouselContainer'>
-                    <div id="images" className='wrapper'>
-                        {listing.pictures.map((pic, index) => {
-                            return (
-                                    <img key={index + 100} src={pic} alt="listing picture" className='carouselPic' />
-                            )       
-                        })}
-                    {/* <img src={listing.pictures[0]} alt="photos carousel" className='carousel'/> */}
-                    </div>
-                    <div className="buttons">
-                        <button className='prev'>
-                            <FontAwesomeIcon icon={faChevronLeft} className='carouselButtons' />
-                        </button>
-                        <button className='next'>
-                            <FontAwesomeIcon icon={faChevronRight} className='carouselButtons' />
-                        </button>
-                    </div>
-                </div>
+                <Carousel pictures={listing.pictures} />
                 <div className='listingTitleNProp'>
                     <div className='titleNSub'>
                         <div className='titleMain'>{listing.title}</div>

@@ -1,44 +1,43 @@
 import './Carousel.scss';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-const Carousel = () => {
+//fetch the array populated with pictures via props
+const Carousel = ({pictures}) => {
 
-  // Set current image index to 0
-  const [index, setIndex] = useState(1)
-
-  // Get house data from context
-  const pictures = useContext(houseContext).pictures
-
-  // Get the number of pictures for the carousel
-  const numPictures = pictures.length
+  // Set default index at array[0]
+  const [position, setPosition] = useState(0);
+  const arrayLength = pictures.length;
 
   // Set next index according to the direction
   const scroll = (direction) => (
-    direction === 'right'
-      ? (setIndex(index === numPictures ? 1 : index + 1))
-      : (setIndex(index === 1 ? numPictures : index - 1))
-  )
+    direction === 'next'
+      ? (setPosition(position === arrayLength - 1 ? 0 : position + 1))
+      : (setPosition(position === 0 ? arrayLength - 1 : position - 1))
+  );
 
     return(
-                <div className='carouselContainer'>
-                    <div id="images" className='wrapper'>
-                        {listing.pictures.map((pic, index) => {
-                            return (
-                                    <img key={index + 100} src={pic} alt="listing picture" className='carouselPic' />
-                            )       
-                        })}
-                    {/* <img src={listing.pictures[0]} alt="photos carousel" className='carousel'/> */}
-                    </div>
-                    <div className="buttons">
-                        <button className='prev'>
-                            <FontAwesomeIcon icon={faChevronLeft} className='carouselButtons' />
-                        </button>
-                        <button className='next'>
-                            <FontAwesomeIcon icon={faChevronRight} className='carouselButtons' />
-                        </button>
-                    </div>
+        <div>
+            <div className='carouselContainer'>
+                <div id="images" className='wrapper'>   
+                    <img src={pictures[position]} alt="listing picture" className='carouselPic' />
                 </div>
+                <div className="buttons">
+                    <button className='prev'>
+                        <FontAwesomeIcon icon={faChevronLeft} className='carouselButtons' onClick = {() => (scroll('previous'))} />
+                    </button>
+                    <button className='next'>
+                        <FontAwesomeIcon icon={faChevronRight} className='carouselButtons' onClick = {() => (scroll('next'))} />
+                    </button>
+                </div>
+            </div>
+            <div>
+                <p className='pagination'>{position + 1}/{arrayLength}</p>
+            </div>
+        </div>
     )
-
 }
 
   export default Carousel;

@@ -10,16 +10,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    .carousel {
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
-        object-fit: cover;
-        overflow: hidden;
-        background-position: center;
-        background-size: cover;
-    }
 }
 
 .wrapper {
@@ -53,11 +43,17 @@
     }
 }
 
-.prev {}
-
-.next {}
-
 .carouselButtons {
     color: white;
     font-size: 38px;
+}
+
+.pagination{
+    position: relative;
+    bottom: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 500;
 }
