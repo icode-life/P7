@@ -62,7 +62,7 @@ function Listing() {
                     </div>
                 </div>
                 <div className='collapses'>
-                   <Collapsible title='Description' content={listing.description} contentType='text' />
+                   {/* <Collapsible title='Description' content={listing.description} contentType='text' /> */}
                    {/*  <Collapsible title='Équipements' content={listing.equipements} contentType='list' /> */}
                 </div>
             </div>
