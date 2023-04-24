@@ -5,7 +5,7 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 
-const Collapsible = ({title, content, contentType}) => {
+const Collapsible = ({title, content, contentType, collapsibleType}) => {
     const [isCollapsed, setIsCollapsed] = useState(false);
 
     function toggleCollapse() {
@@ -19,18 +19,18 @@ const Collapsible = ({title, content, contentType}) => {
         {isCollapsed 
             ? ( contentType === 'text'
                 ?   (<div>
-                        <div className='collapsibleTitle'>
+                        <div className={ collapsibleType === 'medium' ? 'collapsibleTitle' : 'collapsibleTitleBig'}>
                             <div>{title}</div>
                             <FontAwesomeIcon icon={faChevronUp} />
                         </div>
-                        <div className='collapsibleContent'>{content}</div>
+                        <div className={ collapsibleType === 'medium' ? 'collapsibleContent' : 'collapsibleContentBig'}>{content}</div>
                     </div>)
                 :   (<div>
-                        <div className='collapsibleTitle'>
+                        <div className={ collapsibleType === 'medium' ? 'collapsibleTitle' : 'collapsibleTitleBig'}>
                             <div>{title}</div>
                             <FontAwesomeIcon icon={faChevronUp} />
                         </div>
-                        <div className='collapsibleContent'>
+                        <div className={ collapsibleType === 'medium' ? 'collapsibleContent' : 'collapsibleContentBig'}>
                             <ul className='wrap'>
                                 {content.map((li) => (<li key={li}>{li}</li>))}
                             </ul>
@@ -39,7 +39,7 @@ const Collapsible = ({title, content, contentType}) => {
 
                 ) )
             : ( <div>
-                    <div className='collapsibleTitle'>
+                    <div className={ collapsibleType === 'medium' ? 'collapsibleTitle' : 'collapsibleTitleBig'}>
                         <div>{title}</div>
                         <FontAwesomeIcon icon={faChevronDown} />
                     </div>

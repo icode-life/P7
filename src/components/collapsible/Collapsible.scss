@@ -28,6 +28,34 @@
     align-items: center;
 }
 
+.collapsibleTitleBig {
+    width: 95%;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: $primary;
+    color: white;
+}
+
+.collapsibleContentBig {
+    width: 95%;
+    height: 150px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #F6F6F6;
+    color: $primary;
+    position: relative;
+    top: -5px;
+    z-index: -1;
+    overflow: scroll;
+    display: flex;
+    align-items: center;
+}
+
 li{
     list-style: none;
 }

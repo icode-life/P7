@@ -1,0 +1,17 @@
+@import '../../style/var-g.scss';
+
+.about{
+    display: flex;
+    flex-direction: column;
+    width: 91%;
+    margin: auto;
+    justify-content: center;
+}
+
+.aboutCollapsibles{
+    width: 86%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
