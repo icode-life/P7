@@ -1,6 +1,9 @@
 @import '../../style/var-g.scss';
 
 footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
     background-color: $footer-color;
     color: $footer-font-color;
     display: flex;

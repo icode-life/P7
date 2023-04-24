@@ -17,13 +17,27 @@ const Collapsible = ({title, content, contentType}) => {
     return (
         <div onClick={() => toggleCollapse()}>           
         {isCollapsed 
-            ? ( <div>
-                    <div className='collapsibleTitle'>
-                        <div>{title}</div>
-                        <FontAwesomeIcon icon={faChevronUp} />
+            ? ( contentType === 'text'
+                ?   (<div>
+                        <div className='collapsibleTitle'>
+                            <div>{title}</div>
+                            <FontAwesomeIcon icon={faChevronUp} />
+                        </div>
+                        <div className='collapsibleContent'>{content}</div>
+                    </div>)
+                :   (<div>
+                        <div className='collapsibleTitle'>
+                            <div>{title}</div>
+                            <FontAwesomeIcon icon={faChevronUp} />
+                        </div>
+                        <div className='collapsibleContent'>
+                            <ul>
+                                {content.map((li) => (<li key={li}>{li}</li>))}
+                            </ul>
+                        </div>
                     </div>
-                    <div className='collapsibleContent'>{content}</div>
-                </div> )
+
+                ) )
             : ( <div>
                     <div className='collapsibleTitle'>
                         <div>{title}</div>
