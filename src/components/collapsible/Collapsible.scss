@@ -24,4 +24,15 @@
     top: -5px;
     z-index: -1;
     overflow: scroll;
+    display: flex;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+}
+
+.wrap{
+    
+    overflow: scroll;
 }

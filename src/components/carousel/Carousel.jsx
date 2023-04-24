@@ -9,7 +9,8 @@ const Carousel = ({pictures}) => {
 
   // Set default index at array[0]
   const [position, setPosition] = useState(0);
-  const arrayLength = pictures.length;
+  const arrayLength = pictures.length; //nombre d'images pour compteur et traitements
+  const displayControls = (arrayLength > 1 ? true : false); //pour affichage ou non des controls sur le carousel 
 
   // slider mgmt
   const scroll = (direction) => (
@@ -18,24 +19,28 @@ const Carousel = ({pictures}) => {
       : (setPosition(position === 0 ? arrayLength - 1 : position - 1))
   );
 
-    return(
+    return (
         <div>
             <div className='carouselContainer'>
                 <div id="images" className='wrapper'>   
                     <img src={pictures[position]} alt="listing picture" className='carouselPic' />
                 </div>
-                <div className="buttons">
-                    <button className='prev'>
-                        <FontAwesomeIcon icon={faChevronLeft} className='carouselButtons' onClick = {() => (scroll('previous'))} />
-                    </button>
-                    <button className='next'>
-                        <FontAwesomeIcon icon={faChevronRight} className='carouselButtons' onClick = {() => (scroll('next'))} />
-                    </button>
+                {displayControls && (
+                    <div className="buttons">
+                        <button className='prev'>
+                            <FontAwesomeIcon icon={faChevronLeft} className='carouselButtons' onClick = {() => (scroll('previous'))} />
+                        </button>
+                        <button className='next'>
+                            <FontAwesomeIcon icon={faChevronRight} className='carouselButtons' onClick = {() => (scroll('next'))} />
+                        </button>
+                    </div>
+                )}
+            </div>
+            {displayControls && (
+                <div>
+                    <p className='pagination'>{position + 1}/{arrayLength}</p>
                 </div>
-            </div>
-            <div>
-                <p className='pagination'>{position + 1}/{arrayLength}</p>
-            </div>
+            )}
         </div>
     )
 }

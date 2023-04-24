@@ -31,7 +31,7 @@ const Collapsible = ({title, content, contentType}) => {
                             <FontAwesomeIcon icon={faChevronUp} />
                         </div>
                         <div className='collapsibleContent'>
-                            <ul>
+                            <ul className='wrap'>
                                 {content.map((li) => (<li key={li}>{li}</li>))}
                             </ul>
                         </div>
