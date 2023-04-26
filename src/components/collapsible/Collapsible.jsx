@@ -11,9 +11,7 @@ const Collapsible = ({title, content, contentType, collapsibleType}) => {
     function toggleCollapse() {
         setIsCollapsed(!isCollapsed);
     }
-
-    console.log(content);
-
+    
     return (
         <div onClick={() => toggleCollapse()}>           
         {isCollapsed 

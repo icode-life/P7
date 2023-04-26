@@ -2,7 +2,6 @@ import './About.scss';
 import Banner from '../../components/banner/Banner';
 import backgroundImage from '../../assets/mountains.png';
 import Collapsible from '../../components/collapsible/Collapsible';
-import  '../../assets/about.json'
 import { useEffect, useState } from 'react';
 
 
@@ -12,7 +11,7 @@ const About = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch('../../about.json')
+        fetch('./about.json')
         .then((response) => response.json())
         .then((data) => {
             setCorporateValues(data);
@@ -32,10 +31,6 @@ const About = () => {
                         )    
                 })
                 }
-                
-                <Collapsible title='Respect' content='test2' contentType='text' collapsibleType='big' />
-                <Collapsible title='Service' content='test3' contentType='text' collapsibleType='big' />
-                <Collapsible title='Sécurité' content='test4' contentType='text' collapsibleType='big' />
             </div>
         </div>
     )
