@@ -6,6 +6,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Collapsible from '../../components/collapsible/Collapsible';
 import Error404 from '../error404/Error404';
 import Carousel from '../../components/carousel/Carousel';
+import { Navigate } from "react-router-dom";
 
 
 function Listing() {
@@ -26,7 +27,7 @@ function Listing() {
     const rating = [1, 2, 3, 4, 5];
     
      if (listing === undefined){
-        return <Error404 />
+        return <Navigate to='*' /> //unsure whether that's any better then just <Error404 />
      } //gestion de traficotage de l'url au niveau des ids en paramètres
 
     
