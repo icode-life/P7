@@ -9,9 +9,16 @@
 }
 
 .aboutCollapsibles{
-    width: 86%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 26px;
+}
+
+@media (max-width: $layout-breakpoint-small) {
+    .about{
+        width: 91%;
+    }
 }
