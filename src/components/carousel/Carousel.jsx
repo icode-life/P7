@@ -23,7 +23,7 @@ const Carousel = ({pictures}) => {
         <div>
             <div className='carouselContainer'>
                 <div id="images" className='wrapper'>   
-                    <img src={pictures[position]} alt="listing picture" className='carouselPic' />
+                    <img src={pictures[position]} alt="listing" className='carouselPic' />
                 </div>
                 {displayControls && (
                     <div className="buttons">
@@ -45,4 +45,4 @@ const Carousel = ({pictures}) => {
     )
 }
 
-  export default Carousel;
+export default Carousel;

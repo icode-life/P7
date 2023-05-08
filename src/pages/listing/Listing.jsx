@@ -4,7 +4,6 @@ import './Listing.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Collapsible from '../../components/collapsible/Collapsible';
-import Error404 from '../error404/Error404';
 import Carousel from '../../components/carousel/Carousel';
 import { Navigate } from "react-router-dom";
 
@@ -22,7 +21,7 @@ function Listing() {
             setListing(data.find(x => x.id === listingId));
             setIsLoading(false);
         });
-    }, []);
+    });
     
     const rating = [1, 2, 3, 4, 5];
     
@@ -43,7 +42,7 @@ function Listing() {
                     </div>
                     <div className='proprio'>
                         <div className='name'>{listing.host.name}</div>
-                        <img className='pic' src={listing.host.picture}></img>
+                        <img className='pic' src={listing.host.picture} alt="proprio"></img>
                     </div>
                 </div>
                 <div className='tagsNStars'>
