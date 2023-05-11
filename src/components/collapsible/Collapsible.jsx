@@ -6,7 +6,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 
 const Collapsible = ({title, content, contentType, collapsibleType}) => {
-    const [isCollapsed, setIsCollapsed] = useState(false);
+    const [isCollapsed, setIsCollapsed] = useState(true);
 
     function toggleCollapse() {
         setIsCollapsed(!isCollapsed);
