@@ -15,7 +15,7 @@
 
 .collapsibleContent{
     width: 400px;
-    height: 150px;
+    height: fit-content;
     padding: 20px;
     border-radius: 5px;
     background-color: #F6F6F6;
@@ -23,7 +23,6 @@
     position: relative;
     top: -5px;
     z-index: -1;
-    overflow: scroll;
     display: flex;
     align-items: center;
 }
