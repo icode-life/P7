@@ -22,10 +22,27 @@ h2{
     font-size: 36px;
     line-height: 51.34px;
     color: $primary;
+    padding: 0px 50px;
+    text-align: center;
 }
 
 .lien{
     color: $primary;
-    margin-top: 170px;
+    margin-top: 150px;
     text-decoration: underline;
+    padding: 0px 50px 100px 50px;
+}
+
+@media (max-width: $layout-breakpoint-small) {
+    h1{
+        font-weight: 700;
+        font-size: 120px;
+    }
+    h2{
+        font-size: 26px;
+        text-align: center;
+    }
+    .lien{
+        padding-bottom: 35px;
+    }
 }
