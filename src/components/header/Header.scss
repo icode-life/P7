@@ -5,12 +5,12 @@
     align-items: center;
     justify-content: space-between;
     width: 96%;
-    margin: 0px 35px 0px 15px;
+    margin: 0px 35px 0px 35px;
 }
 
 .style-logo{
     display: flex;
-    padding: 26px 50px;
+    padding: 26px 0px;
     margin-top: 0px;
     margin-left: 5%;
     height: 50px;
@@ -22,7 +22,6 @@ nav{
 
 .menu{
     display: flex;
-    justify-content: center;
     gap: 25px;
     align-items: center;
 }
@@ -51,5 +50,11 @@ a, a:visited{
     }
     nav{
         padding-right: 0px;
+    }
+}
+
+@media (max-width: $layout-breakpoint-medium){
+    nav{
+        padding-right: 5%;
     }
 }
