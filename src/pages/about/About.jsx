@@ -9,6 +9,7 @@ const About = () => {
 
     const [corporateValues, setCorporateValues] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    
 
     useEffect(() => {
         fetch('./about.json')
@@ -25,9 +26,9 @@ const About = () => {
         <div className='about'>
             <Banner backgroundImage={backgroundImage}></Banner>
             <div className='aboutCollapsibles'>
-                { !isLoading && corporateValues.map( (item) => {
+                { !isLoading && corporateValues.map( (item, index) => {
                     return(
-                        <Collapsible key={item} title={item.title} content={item.content} contentType='text' collapsibleType={item.collapsibleType} />
+                        <Collapsible key={index+1000} title={item.title} content={item.content} contentType='text' collapsibleType={item.collapsibleType} />
                         )    
                 })
                 }
