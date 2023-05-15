@@ -35,30 +35,32 @@ function Listing() {
             {!isLoading ? (
             <div>
                 <Carousel pictures={listing.pictures} />
-                <div className='listingTitleNProp'>
-                    <div className='titleNSub'>
-                        <div className='titleMain'>{listing.title}</div>
-                        <div className='sub'>{listing.location}</div>
+                <div className='midSection'>
+                    <div className='listingTitleNTags'>
+                        <div className='titleNSub'>
+                            <div className='titleMain'>{listing.title}</div>
+                            <div className='sub'>{listing.location}</div>
+                            <div className='tags'>{listing.tags.map((tag, index) => { 
+                            return(
+                                <p key={index+10} className='tag'>{tag}</p>
+                        )})}</div>
+                        </div>
                     </div>
-                    <div className='proprio'>
-                        <div className='name'>{listing.host.name}</div>
-                        <img className='pic' src={listing.host.picture} alt="proprio"></img>
-                    </div>
-                </div>
-                <div className='tagsNStars'>
-                    <div className='tags'>{listing.tags.map((tag, index) => { 
-                        return(
-                            <p key={index+10} className='tag'>{tag}</p>
-                    )})}</div>
-                    <div className='stars'>{
-                        rating.map((i) => (
-                            i <= Number(listing.rating) ? (
-                            <FontAwesomeIcon key={i} icon={faStar} className='star' /> 
-                            ) : ( 
-                            <FontAwesomeIcon key={i} icon={faStar} className='starEmpty' />
-                            )
-                        ))
-                    }
+                    <div className='proprioNStars'>
+                        <div className='proprio'>
+                            <div className='name'>{listing.host.name}</div>
+                            <img className='pic' src={listing.host.picture} alt="proprio"></img>
+                        </div>
+                        <div className='stars'>{
+                            rating.map((i) => (
+                                i <= Number(listing.rating) ? (
+                                <FontAwesomeIcon key={i} icon={faStar} className='star' /> 
+                                ) : ( 
+                                <FontAwesomeIcon key={i} icon={faStar} className='starEmpty' />
+                                )
+                            ))
+                        }
+                        </div>
                     </div>
                 </div>
                 <div className='collapses'>

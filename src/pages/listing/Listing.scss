@@ -1,69 +1,81 @@
 @import '../../style/var-g.scss';
 
-.listingTitleNProp{
-    margin: 5%;
+.midSection{
     display: flex;
     justify-content: space-between;
+    margin: 5%;
     margin-top: 0;
-    margin-bottom: 0px;
-    .titleNSub{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-        .titleMain{
-            color: $primary;
-            font-size: x-large;
-        }
-        .sub{
-            color: $primary;
-            text-align: start;
-            font-size: small;
-        }
-    }
-    .proprio{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .name{
-            color: $primary;
-        }
-        .pic{
-            border-radius: 100px;
-            height: 50%;
-        }
-    }
+    margin-bottom: 0;
 }
 
-.tagsNStars{
+.listingTitleNTags{
+    
     display: flex;
-    margin: 5%;
-    margin-top: 0px;
-    justify-content: space-between;
-    .tags{
-        display: flex;
-        gap: 10px;
-       .tag{
-            background-color: $primary;
-            padding: 0 30px;
-            color: white;
-            border-radius: 35px;
-            font-size: small;
+    flex-direction: column;
+    .titleNSub {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            .titleMain {
+                color: $primary;
+                font-size: x-large;
+                margin-bottom: 0;
+            }
+            .sub {
+                color: $primary;
+                text-align: start;
+                font-size: small;
+            }
         }
+    .tags {
+            display: flex;
+            gap: 10px;
+            padding-top: 10px;
+    
+            .tag {
+                height: 21px;
+                background-color: $primary;
+                padding: 0 30px;
+                color: white;
+                border-radius: 20px;
+                font-size: small;
+                display: flex;
+                align-items: center;
+            }
+        }
+}
+.proprioNStars{
+    
+    .proprio {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .name {
+                color: $primary;
+                padding-right: 30px;
+            }
+    
+            .pic {
+                border-radius: 100px;
+                height: 71px;
+                
+            }
     }
-    .stars{
+    .stars {
         width: 200px;
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        gap: 7px;
-        .star{
+        gap: 15px;
+
+        .star {
             color: $primary;
         }
-        .starEmpty{
+
+        .starEmpty {
             color: lightgrey;
         }
     }
@@ -73,6 +85,59 @@
     display: flex;
     margin: 5%;
     justify-content: space-between;
-   margin-bottom: 170px;
+   margin-bottom: 100px;
 }
 
+@media (max-width: $layout-breakpoint-small) {
+    .carousel{
+    }
+    .midSection {
+        flex-direction: column;
+    }
+    
+    .proprioNStars{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        .stars {
+            flex-grow: 2;
+            gap: 5px;
+            justify-content: flex-start;
+            width: 120px;
+            height: 35px;
+            .star{
+                height: 12px;
+            }
+        }
+        .proprio{
+            flex-grow: 1;
+            .name{
+                padding-right: 3px;
+                padding-left: 50px;
+            }
+            .pic{
+                height: 50px;
+            }
+        }
+    }
+
+    .listingTitleNTags{
+        .tags {
+                padding-top: 0px;
+                .tag{
+                    font-size: 12px;
+                    white-space: nowrap;
+                    padding-right: 7px;
+                    padding-left: 7px;
+                }
+          }
+    }
+    
+
+    .collapses{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}

@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-between;
     width: 96%;
+    margin: 0px 35px 0px 15px;
 }
 
 .style-logo{
@@ -14,12 +15,15 @@
     height: 50px;
 }
 
+nav{
+    padding-right: 3%;
+}
+
 .menu{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 25px;
     align-items: center;
-    padding-right: 15px;
 }
 
 .menu-item{
@@ -34,4 +38,17 @@ a, a:visited{
 
 .underlined{
     text-decoration: underline;
+}
+
+@media (max-width: $layout-breakpoint-small){
+    .style-logo{
+        height: 30px;
+        padding: 26px 50px 26px 15px;
+    }
+    .header{
+        margin: 0px 0px 0px 0px;
+    }
+    nav{
+        padding-right: 0px;
+    }
 }

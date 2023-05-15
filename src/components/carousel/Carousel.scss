@@ -1,3 +1,12 @@
+@import '../../style/var-g.scss';
+
+.carouselComponent{
+    height: 415px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border: 0px;
+}
+
 .carouselContainer {
     width: 90%;
     margin: auto;
@@ -59,4 +68,23 @@
     align-items: center;
     color: white;
     font-weight: 500;
+}
+
+@media (max-width: $layout-breakpoint-small){
+    .carouselComponent{
+        height: 260px;
+    }
+    .carouselContainer{
+        height: 250px;
+    }
+        .buttons {
+            button {
+                width: 50px;
+                height: 250px;
+            }
+        }
+
+    .wrapper img{
+        height: 250px;
+    }
 }

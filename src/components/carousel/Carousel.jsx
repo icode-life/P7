@@ -20,7 +20,7 @@ const Carousel = ({pictures}) => {
   );
 
     return (
-        <div>
+        <div className='carouselComponent'>
             <div className='carouselContainer'>
                 <div id="images" className='wrapper'>   
                     <img src={pictures[position]} alt="listing" className='carouselPic' />
@@ -37,9 +37,7 @@ const Carousel = ({pictures}) => {
                 )}
             </div>
             {displayControls && (
-                <div>
                     <p className='pagination'>{position + 1}/{arrayLength}</p>
-                </div>
             )}
         </div>
     )

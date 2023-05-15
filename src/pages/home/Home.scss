@@ -1,5 +1,20 @@
+@import '../../style/var-g.scss';
+
 .main{
   margin: 35px;
+}
+
+.catchPhrase{
+  padding: 15px;
+  color: white;
+  font-size: 38px;
+  font-weight: 350;
+  }
+
+.catchPhrase {
+  color: white;
+  font-size: 38px;
+  font-weight: 350;
 }
 
 .container-cards{
@@ -11,4 +26,20 @@
   padding: 20px;
   justify-content: center;
   border-radius: 20px;
+}
+
+@media (width <= 768px){
+  .catchPhrase{
+    overflow-wrap: break-word;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: $layout-breakpoint-small){
+  .main{
+    margin: 20px;
+  }
+  .container-cards{
+    background-color: white;
+  }
 }

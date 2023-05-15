@@ -25,6 +25,7 @@
     z-index: -1;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .collapsibleTitleBig {
@@ -63,4 +64,18 @@ li{
 .wrap{
     
     overflow: scroll;
+}
+
+//media queries
+@media (max-width: $layout-breakpoint-small){
+    .collapsibleTitle{
+        max-width: 350px;
+        margin: auto;
+        padding: 5px;
+    }
+    .collapsibleContent{
+        max-width: 350px;
+        margin: auto;
+        padding: 5px;
+    }
 }
