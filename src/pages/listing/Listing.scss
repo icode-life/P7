@@ -82,15 +82,16 @@
 }
 
 .collapses{
+    width: 90%;
     display: flex;
-    margin: 5%;
+    margin: 5% auto;
     justify-content: space-between;
-   margin-bottom: 100px;
+    margin-bottom: 100px;
+    gap: 50px;
 }
 
 @media (max-width: $layout-breakpoint-small) {
-    .carousel{
-    }
+
     .midSection {
         flex-direction: column;
     }

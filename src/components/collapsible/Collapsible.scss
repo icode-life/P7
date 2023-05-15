@@ -1,10 +1,17 @@
 @import '../../style/var-g.scss';
 
+.sizeMgmt{
+   width: 100%;
+   
+}
+
 .collapsibleTitle{
-    width: 400px;
+    width: 95%;
+    max-width: 800px;
     height: 30px;
     border-radius: 5px;
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: space-between;
     padding-left: 20px;
@@ -14,7 +21,8 @@
 }
 
 .collapsibleContent{
-    width: 400px;
+    width: 95%;
+    max-width: 800px;
     height: fit-content;
     padding: 20px;
     border-radius: 5px;
@@ -24,6 +32,7 @@
     top: -5px;
     z-index: -1;
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: flex-start;
 }
@@ -67,15 +76,25 @@ li{
 }
 
 //media queries
-@media (max-width: $layout-breakpoint-small){
-    .collapsibleTitle{
-        max-width: 350px;
+@media (max-width: $layout-breakpoint-medium) {
+    .collapsibleTitle {
         margin: auto;
         padding: 5px;
     }
-    .collapsibleContent{
-        max-width: 350px;
+
+    .collapsibleContent {
         margin: auto;
         padding: 5px;
     }
 }
+@media (max-width: $layout-breakpoint-small){
+    .collapsibleTitle{
+        margin: auto;
+        padding: 5px;
+    }
+    .collapsibleContent{
+        margin: auto;
+        padding: 5px;
+    }
+}
+

@@ -13,7 +13,7 @@ const Collapsible = ({title, content, contentType, collapsibleType}) => {
     }
     
     return (
-        <div onClick={() => toggleCollapse()}>           
+        <div onClick={() => toggleCollapse()} className='sizeMgmt'>           
         {isCollapsed 
             ? ( contentType === 'text'
                 ?   (<div>
