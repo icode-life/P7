@@ -1,15 +1,11 @@
 import {Link} from 'react-router-dom'
 import './Header.scss'
 import Logo from '../../assets/logo.svg'
-import { useParams } from 'react-router-dom';
 
 
 
 
-const Header = () => {
-
-    const about = useParams();
-    
+const Header = () => {    
 
     return(
         <div className='header'>

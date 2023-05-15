@@ -27,7 +27,7 @@ function Home() {
         {!isLoading && (logements.map((logement) => {
           return (
             <div>
-                <Card key={logement.id} title={logement.title} cover={logement.cover} listingId={logement.id} />
+                <Card key={Number(logement.id)} title={logement.title} cover={logement.cover} listingId={logement.id} />
             </div>
           )
         }))}  
