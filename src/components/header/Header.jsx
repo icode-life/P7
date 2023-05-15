@@ -8,19 +8,19 @@ import { useParams } from 'react-router-dom';
 
 const Header = () => {
 
-    const accueil = useParams();
-    console.log(accueil);
+    const about = useParams();
     
+
     return(
         <div className='header'>
             <Link to="/"><img src={Logo} className='style-logo' alt='logo-Kasa'/></Link>
             <nav>
                 <ul className='menu'>
                 <li className='menu-item'>
-                    <Link to="/">Accueil</Link>
+                    <Link to="/" className='underlined'>Accueil</Link>
                 </li>
                 <li className='menu-item'>
-                    <Link to="/about" className='underlined'>A propos</Link>
+                    <Link to="/about">A propos</Link>
                 </li>
                 </ul>
             </nav>
